@@ -22,7 +22,7 @@ route.meta.menuTitle = post.value?.title || 'Dictionary';
   <div data-pagefind-body w-full v-if="post" class="root">
     <h1>
       <span data-pagefind-meta="title">{{ post.title }}</span>
-      <small class="detail"
+      <small class="detail" v-if="post.category"
         >（
         <span data-pagefind-meta="category">{{ post.category }}</span>
         ）</small
