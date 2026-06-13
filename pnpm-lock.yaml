@@ -44,6 +44,9 @@ importers:
       pagefind:
         specifier: 1.5.2
         version: 1.5.2
+      ufo:
+        specifier: ^1.6.4
+        version: 1.6.4
       unstorage:
         specifier: ^1.17.5
         version: 1.17.5(db0@0.3.4(better-sqlite3@12.10.0))(idb-keyval@6.2.2)(ioredis@5.10.1)

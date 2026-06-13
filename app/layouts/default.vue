@@ -33,18 +33,18 @@ const route = useRoute();
         class="contentSlot"
         :class="{ contentMain: route.meta.contentMain }"
       >
-        <div h-8 w-full>
-          <!-- guide bar (title, return, menu, etc..) -->
-          <div h-full w-full class="menuBar" flex justify-between items-center>
-            <span w-15>
-              <NuxtLink class="back" :to="route.meta.returnTo || '/'"
-                >＜戻る</NuxtLink
-              >
-            </span>
-            <span>{{ route.meta.menuTitle || 'Dictionary' }}</span>
-            <span w-15></span>
-          </div>
+        <!-- guide bar (title, return, menu, etc..) -->
+        <div h-8 w-full class="menuBar" flex justify-between items-center>
+          <span w-15>
+            <NuxtLink class="back" :to="route.meta.returnTo || '/'"
+              >＜戻る</NuxtLink
+            >
+          </span>
+          <span>{{ route.meta.menuTitle || 'Dictionary' }}</span>
+          <span w-15>
+          </span>
         </div>
+
         <article class="slotBox">
           <slot />
         </article>

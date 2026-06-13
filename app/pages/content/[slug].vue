@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { joinURL } from 'ufo';
+
 const slug = useRoute().params.slug;
 const { data: post } = await useAsyncData(`dict-${slug}`, () => {
   return queryCollection('dictionary').path(`/dict/${slug}`).first();
@@ -18,7 +20,7 @@ route.meta.menuTitle = post.value?.title || 'Dictionary';
 </script>
 
 <template>
-  <!-- Render the blog post as Prose & Vue components -->
+  <!-- Render the post as Prose & Vue components -->
   <div data-pagefind-body w-full v-if="post" class="root">
     <h1>
       <span data-pagefind-meta="title">{{ post.title }}</span>
@@ -30,6 +32,17 @@ route.meta.menuTitle = post.value?.title || 'Dictionary';
     </h1>
     <div w-full class="content">
       <ContentRenderer :value="post" />
+    </div>
+
+    <div w-full flex justify-center gap-4>
+      <a :href="joinURL('https://github.com/wing-0902/hs-geography/blob/main/content', post.path, 'index.md')" target="_blank">
+        <span i-material-symbols-light-docs></span>
+        Markdownを表示
+      </a>
+      <a :href="joinURL('https://github.com/wing-0902/hs-geography/edit/main/content', post.path, 'index.md')" target="_blank">
+        <span i-material-symbols-light-edit></span>
+        編集を提案
+      </a>
     </div>
   </div>
   <div v-else>
