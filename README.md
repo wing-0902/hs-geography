@@ -1,4 +1,4 @@
-# [地理探求　用語辞書](https://geography.hs.wing.osaka)
+# [地理探求　用語辞書](https://geography.hs.dict.digital)
 
 ## ディレクトリ構造
 
@@ -15,7 +15,7 @@
 │   ├── components
 │   │   └── Header.vue
 │   ├── layouts
-│   │   └── default.astro
+│   │   └── default.vue
 │   ├── pages
 │   │   └── index.vue
 │   └── var
