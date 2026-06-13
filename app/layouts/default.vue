@@ -41,8 +41,7 @@ const route = useRoute();
             >
           </span>
           <span>{{ route.meta.menuTitle || 'Dictionary' }}</span>
-          <span w-15>
-          </span>
+          <span w-15> </span>
         </div>
 
         <article class="slotBox">

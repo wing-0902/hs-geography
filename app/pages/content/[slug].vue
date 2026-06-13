@@ -35,11 +35,29 @@ route.meta.menuTitle = post.value?.title || 'Dictionary';
     </div>
 
     <div w-full flex justify-center gap-4>
-      <a :href="joinURL('https://github.com/wing-0902/hs-geography/blob/main/content', post.path, 'index.md')" target="_blank">
+      <a
+        :href="
+          joinURL(
+            'https://github.com/wing-0902/hs-geography/blob/main/content',
+            post.path,
+            'index.md'
+          )
+        "
+        target="_blank"
+      >
         <span i-material-symbols-light-docs></span>
         Markdownを表示
       </a>
-      <a :href="joinURL('https://github.com/wing-0902/hs-geography/edit/main/content', post.path, 'index.md')" target="_blank">
+      <a
+        :href="
+          joinURL(
+            'https://github.com/wing-0902/hs-geography/edit/main/content',
+            post.path,
+            'index.md'
+          )
+        "
+        target="_blank"
+      >
         <span i-material-symbols-light-edit></span>
         編集を提案
       </a>

@@ -8,34 +8,46 @@ const mode = useStorage('dict-search-mode', '見出し');
 <template>
   <div h-full w-full p-3 pr-1>
     <section h-full w-full flex flex-col p-3 class="root">
-      <div h-10 w-full flex p-0 class="searchSlot">
-        <input h-full w-full type="text" placeholder="検索.." v-model="query" />
-        <button
-          bg-transparent
-          h-full
-          w-10
-          class="delAll"
-          flex
-          items-center
-          justify-center
-          text-4
-          text-white
-          border-0
-          m-0
-          @click="query = ''"
-          v-if="query"
-        >
-          <span i-hugeicons-cancel-01></span>
-        </button>
-      </div>
-      <div mt-2 h-8 w-full flex class="changeButtonSlot">
-        <button :class="{ select: mode === '見出し' }" @click="mode = '見出し'">
-          見出し
-        </button>
-        <button :class="{ select: mode === '全文' }" @click="mode = '全文'">
-          全文
-        </button>
-      </div>
+      <ClientOnly>
+        <div h-10 w-full flex p-0 class="searchSlot">
+          <input
+            h-full
+            w-full
+            type="text"
+            placeholder="検索.."
+            v-model="query"
+          />
+          <button
+            bg-transparent
+            h-full
+            w-10
+            class="delAll"
+            flex
+            items-center
+            justify-center
+            text-4
+            text-white
+            border-0
+            m-0
+            @click="query = ''"
+            v-if="query"
+          >
+            <span i-hugeicons-cancel-01></span>
+          </button>
+        </div>
+
+        <div mt-2 h-8 w-full flex class="changeButtonSlot">
+          <button
+            :class="{ select: mode === '見出し' }"
+            @click="mode = '見出し'"
+          >
+            見出し
+          </button>
+          <button :class="{ select: mode === '全文' }" @click="mode = '全文'">
+            全文
+          </button>
+        </div>
+      </ClientOnly>
 
       <div class="others" h-full w-full mt-3>
         <PagefindContent :query="query" v-if="mode === '全文'" />

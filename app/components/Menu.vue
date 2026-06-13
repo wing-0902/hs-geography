@@ -1,6 +1,15 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue';
 
+const route = useRoute();
+
+watch(
+  () => route.path,
+  (newPath, oldPath) => {
+    close();
+  }
+);
+
 // メニューの開閉状態を管理
 const isOpen = ref(false);
 // メニューの外側をクリックしたときに閉じるための参照
@@ -82,7 +91,7 @@ const copyUrlScheme = () => {
         absolute
         right-0
         mt-2
-        w-60
+        w-88
         bg-transparent
         rounded-5
         z-50
@@ -90,23 +99,24 @@ const copyUrlScheme = () => {
         class="menu-dropdown"
       >
         <ul list-none p-1 m-0>
-          <!-- 区切りは <li my-1></li> で表記 -->
+          <!-- 区切りは <hr /> で表記 -->
           <li>
-            <NuxtLink to="/info/app/" custom v-slot="{ navigate }">
-              <button @click="(close(), navigate())" role="link">
-                このAppについて
-              </button>
-            </NuxtLink>
+            <NuxtLink to="/info/app/"> このAppについて </NuxtLink>
           </li>
           <li>
-            <NuxtLink to="/info/contents/" custom v-slot="{ navigate }">
-              <button @click="(close(), navigate())" role="link">
-                コンテンツの著作権
-              </button>
-            </NuxtLink>
+            <NuxtLink to="/info/contents/"> コンテンツの著作権 </NuxtLink>
+          </li>
+          <li>
+            <NuxtLink
+              to="https://github.com/wing-0902/hs-geography"
+              target="_blank"
+            >
+              <span i-hugeicons-github-01></span>
+              GitHub</NuxtLink
+            >
           </li>
 
-          <li mt-1></li>
+          <hr />
 
           <li>
             <button @click="handleShare">共有</button>
@@ -124,9 +134,17 @@ const copyUrlScheme = () => {
 .menu-dropdown {
   backdrop-filter: blur(4px);
   border: 1px solid var(--codeBack);
+  height: 400px;
+  max-height: calc(100dvh - 80px);
   ul {
     li {
-      button {
+      margin: 1px;
+      list-style: none;
+      button,
+      a {
+        appearance: none;
+        -webkit-appearance: none;
+        display: block;
         width: 100%;
         height: 40px;
         border-radius: 20px;
@@ -142,6 +160,11 @@ const copyUrlScheme = () => {
           background-color: var(--codeBack);
         }
       }
+    }
+    hr {
+      margin: 20px 4px;
+      color: rgba(255, 255, 255, 0.3);
+      height: 0.5px;
     }
   }
 }
