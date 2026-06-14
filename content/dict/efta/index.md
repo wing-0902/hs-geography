@@ -7,9 +7,9 @@ category: 連合
 
 - 正式名称：欧州自由貿易連合
 - 現加盟国
-    - ノルウェー
-    - スイス
-    - アイスランド
+    - [ノルウェー](/content/no)
+    - [スイス](/content/ch)
+    - [アイスランド](/content/is)
     - リヒテンシュタイン
 
 ## 2. EUとの関係
@@ -18,9 +18,9 @@ category: 連合
 
 ### EEA（欧州経済領域）
 
-    - [ノルウェー](/content/no)，[アイスランド](/content/is)，リヒテンシュタインが参加
-    - [EU](/content/eu)非加盟のままその巨大市場に参加
-    - [スイス](/content/ch)はEEA不参加も，個別の協定で対応
+- [ノルウェー](/content/no)，[アイスランド](/content/is)，リヒテンシュタインが参加
+- [EU](/content/eu)非加盟のままその巨大市場に参加
+- [スイス](/content/ch)はEEA不参加も，個別の協定で対応
 
 ### EUとEFTAの違い
 
@@ -53,4 +53,4 @@ category: 連合
 - ［1986年］[ポルトガル](/content/pt)脱退（ECへ），[フィンランド](/content/fi)正式加盟
 - ［1991年］リヒテンシュタイン正式加盟
     - [スイス](/content/ch)と関税同盟があり，1960年から事実上加盟状態
-- ［1995年］[オーストリア](/content/at)，(スウェーデン)[/content/se]、[フィンランド](/content/fi)脱退（ECへ）
+- ［1995年］[オーストリア](/content/at)，[スウェーデン](/content/se)、[フィンランド](/content/fi)脱退（ECへ）
