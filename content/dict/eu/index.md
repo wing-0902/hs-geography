@@ -1,6 +1,6 @@
 ---
 title: 欧州連合
-category: 国際組織
+category: 連合
 ---
 
 ## 1. 概要
