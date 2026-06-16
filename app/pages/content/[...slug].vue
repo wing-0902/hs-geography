@@ -1,9 +1,15 @@
 <script setup lang="ts">
 import { joinURL } from 'ufo';
 
-const slug = useRoute().params.slug;
-const { data: post } = await useAsyncData(`dict-${slug}`, () => {
-  return queryCollection('dictionary').path(`/dict/${slug}`).first();
+const slugArray = useRoute().params.slug; // [...slug] の場合は配列になる
+
+// 配列を "dir1/dir2/page" のようなスラッシュ区切りの文字列に変換
+// 万が一空（ルートパス）の場合を考慮して、空文字をデフォルト値に設定
+const slugPath = Array.isArray(slugArray) ? slugArray.join('/') : slugArray;
+
+// useAsyncDataのキーやpathに結合した文字列を渡す
+const { data: post } = await useAsyncData(`dict-${slugPath}`, () => {
+  return queryCollection('dictionary').path(`/dict/${slugPath}`).first();
 });
 
 useSeoMeta({
