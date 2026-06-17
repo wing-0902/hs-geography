@@ -107,7 +107,7 @@ const copyUrlScheme = () => {
             <NuxtLink to="/info/contents/"> コンテンツの著作権 </NuxtLink>
           </li>
           <li>
-            <NuxtLink to="/sitemap.xml">サイトマップ</NuxtLink>
+            <a href="/sitemap.xml">サイトマップ</a>
           </li>
           <li>
             <NuxtLink
