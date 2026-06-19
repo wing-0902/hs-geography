@@ -40,7 +40,7 @@ route.meta.menuTitle = post.value?.title || 'Dictionary';
       <ContentRenderer :value="post" />
     </div>
 
-    <div w-full flex justify-center gap-4>
+    <div data-pagefind-ignore w-full flex justify-center gap-4>
       <NuxtLink
         :href="
           joinURL(
