@@ -22,7 +22,7 @@ category: 連合
     - [フランス](/content/fr)
     - 西ドイツ
     - [イタリア](/content/it)
-    - ベネルクス三国（[ベルギー](/content/be)，[オランダ](/content/nl)，ルクセンブルク）：ベネルクス関税同盟
+    - [ベネルクス三国](/content/benelux)（[ベルギー](/content/be)，[オランダ](/content/nl)，ルクセンブルク）：[ベネルクス関税同盟](/content/benelux)
 - ［1968年］EC関税同盟
   - 域内関税撤廃
   - 対外共通関税の実施
