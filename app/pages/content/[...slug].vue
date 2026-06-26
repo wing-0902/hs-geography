@@ -27,7 +27,7 @@ route.meta.menuTitle = post.value?.title || 'Dictionary';
 
 <template>
   <!-- Render the post as Prose & Vue components -->
-  <div data-pagefind-body w-full v-if="post" class="root">
+  <main data-pagefind-body w-full v-if="post" class="root">
     <h1>
       <span data-pagefind-meta="title">{{ post.title }}</span>
       <small class="detail" v-if="post.category"
@@ -36,9 +36,9 @@ route.meta.menuTitle = post.value?.title || 'Dictionary';
         ）</small
       >
     </h1>
-    <div w-full class="content">
+    <article w-full class="content">
       <ContentRenderer :value="post" />
-    </div>
+    </article>
 
     <div data-pagefind-ignore w-full flex justify-center gap-4>
       <NuxtLink
@@ -68,7 +68,7 @@ route.meta.menuTitle = post.value?.title || 'Dictionary';
         編集を提案
       </NuxtLink>
     </div>
-  </div>
+  </main>
   <div v-else>
     <h1>Not Found</h1>
     <p>読み込み中またはコンテンツが存在しません．</p>
