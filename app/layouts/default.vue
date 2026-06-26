@@ -25,7 +25,7 @@ const route = useRoute();
       </div>
 
       <!-- content main -->
-      <main
+      <div
         h-full
         pb-3
         pr-4
@@ -52,7 +52,7 @@ const route = useRoute();
             <Share />
           </div>
         </div>
-      </main>
+      </div>
     </div>
   </div>
 </template>
