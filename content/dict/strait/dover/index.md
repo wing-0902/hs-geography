@@ -8,7 +8,7 @@ category: 地形
 ## 1. 概要
 
 - 北海と大西洋を結ぶ
-- 国際海峡
+- [国際海峡](/content/strait/international)
 - [フランス](/content/fr)側ではカレー海峡と呼ばれる
 - 英仏海峡トンネル
   - ユーロトンネルとも言われる
