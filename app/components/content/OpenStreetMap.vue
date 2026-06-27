@@ -36,11 +36,20 @@ const handleAccept = () => {
       justify-center
     >
       <p i-material-symbols-light-info text-gray-600 text-2xl></p>
+      <p text-xl text-center mb-2 text-gray-600>
+        クリックすると外部の地図（OpenStreetMap）を読み込みます．
+      </p>
       <p text-sm text-center mb-4 text-gray-600>
-        クリックすると外部の地図（OpenStreetMap）を読み込みます．<br />
         （この機能を利用すると，外部のウェブサイトがあなたやデバイスに関する情報を収集する場合があります．）
       </p>
-      <button @click="handleAccept" class="handleAcceptButton">
+      <button
+        mt-4
+        border-none
+        bg-transparent
+        text-xl
+        @click="handleAccept"
+        class="handleAcceptButton"
+      >
         地図を表示する
       </button>
     </div>
@@ -59,5 +68,6 @@ const handleAccept = () => {
   max-height: calc(100dvh - 150px);
 }
 .handleAcceptButton {
+  color: var(--themeColor);
 }
 </style>
