@@ -121,6 +121,12 @@ route.meta.menuTitle = post.value?.title || 'Dictionary';
     code {
       word-break: break-all;
     }
+    .openStreetMap {
+      height: calc(100dvh - 40px);
+      max-height: 750px;
+      width: 100%;
+      border: 1px solid var(--codeBack);
+    }
   }
 }
 </style>
