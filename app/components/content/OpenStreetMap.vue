@@ -35,14 +35,12 @@ const handleAccept = () => {
       items-center
       justify-center
     >
-      <p class="text-sm text-center mb-4 text-gray-600">
+      <p i-material-symbols-light-info text-gray-600 text-2xl></p>
+      <p text-sm text-center mb-4 text-gray-600>
         クリックすると外部の地図（OpenStreetMap）を読み込みます．<br />
-        （この機能を利用すると，外部のウェブサイトがあなたやお使いのデバイスに関する情報を収集する場合があります．）
+        （この機能を利用すると，外部のウェブサイトがあなたやデバイスに関する情報を収集する場合があります．）
       </p>
-      <button
-        @click="handleAccept"
-        class="bg-blue-600 text-white px-4 py-2 rounded shadow hover:bg-blue-700 transition"
-      >
+      <button @click="handleAccept" class="handleAcceptButton">
         地図を表示する
       </button>
     </div>
@@ -59,5 +57,7 @@ const handleAccept = () => {
 .mapRootDiv {
   height: 400px;
   max-height: calc(100dvh - 150px);
+}
+.handleAcceptButton {
 }
 </style>
