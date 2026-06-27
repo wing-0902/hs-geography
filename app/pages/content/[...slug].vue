@@ -122,8 +122,8 @@ route.meta.menuTitle = post.value?.title || 'Dictionary';
       word-break: break-all;
     }
     .openStreetMap {
-      height: calc(100dvh - 40px);
-      max-height: 750px;
+      height: calc(100dvh - 100px);
+      max-height: 550px;
       width: 100%;
       border: 1px solid var(--codeBack);
     }
