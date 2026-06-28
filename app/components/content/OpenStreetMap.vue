@@ -1,15 +1,20 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, computed } from 'vue';
+import { withQuery } from 'ufo';
 
-defineProps({
-  frameSrc: String,
-  linkHref: String
-});
+const props = withDefaults(
+  defineProps<{
+    lat: number | string;
+    lon: number | string;
+    zoom?: number | string;
+  }>(),
+  {
+    zoom: 14
+  }
+);
 
-// 初期値は一端 false にしておく
 const isHidden = ref(true);
 
-// クライアントサイドでのマウント時に localStorage を確認
 onMounted(() => {
   const isAgreed = localStorage.getItem('map_privacy_agreed');
   if (isAgreed === 'true') {
@@ -17,11 +22,49 @@ onMounted(() => {
   }
 });
 
-// ユーザーが同意してボタンを押した時の処理
 const handleAccept = () => {
   isHidden.value = false;
   localStorage.setItem('map_privacy_agreed', 'true');
 };
+
+const latNum = computed(() => Number(props.lat));
+const lonNum = computed(() => Number(props.lon));
+const zoomNum = computed(() => Number(props.zoom));
+
+// 緯度・経度・ズームレベルから iframe 用の bbox を計算
+const bboxString = computed(() => {
+  const degreeDelta = 360 / Math.pow(2, zoomNum.value);
+  const aspectRatio = 16 / 9; 
+  const lonDelta = degreeDelta * aspectRatio * 0.25;
+  const latDelta = degreeDelta * 0.25;
+
+  const minLon = lonNum.value - lonDelta;
+  const minLat = latNum.value - latDelta;
+  const maxLon = lonNum.value + lonDelta;
+  const maxLat = latNum.value + latDelta;
+
+  return `${minLon},${minLat},${maxLon},${maxLat}`;
+});
+
+const frameSrc = computed(() => {
+  return withQuery('https://www.openstreetmap.org/export/embed.html', {
+    bbox: bboxString.value,
+    layer: 'mapnik',
+    marker: `${latNum.value},${lonNum.value}`
+  });
+});
+
+const linkHref = computed(() => {
+  const fixedLat = latNum.value.toFixed(5);
+  const fixedLon = lonNum.value.toFixed(5);
+  
+  const baseUrlWithQuery = withQuery('https://www.openstreetmap.org/', {
+    mlat: fixedLat,
+    mlon: fixedLon
+  });
+  
+  return `${baseUrlWithQuery}#map=${zoomNum.value}/${fixedLat}/${fixedLon}`;
+});
 </script>
 
 <template>
@@ -54,7 +97,7 @@ const handleAccept = () => {
       </button>
     </div>
 
-    <iframe v-else w-full h-full :src="frameSrc"></iframe>
+    <iframe v-else w-full h-full :src="frameSrc" style="border: none;"></iframe>
 
     <NuxtLink text-right :to="linkHref" target="_blank" class="mt-2">
       新規タブで開く<span i-material-symbols-light-open-in-new></span>

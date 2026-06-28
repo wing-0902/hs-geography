@@ -29,3 +29,14 @@
 │       └── asia_nies/index.md <- 単語を繋げる時は「_」（アンダースコア）を使う
 └── package.json
 ```
+
+## 地図について
+
+OpenStreetMap用のコンポーネントがあります．
+
+例えばGeo URIが`geo:41.1549,29.0582?z=11`の場合，コンテンツ用のMarkdownからは，以下のように呼び出すことができます．
+
+```md
+::open-street-map{lat="41.1549" lon="29.0582" zoom="11"}
+::
+```
