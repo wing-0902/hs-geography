@@ -5,7 +5,7 @@ category: 地形
 
 ヨーロッパ大陸とアフリカ大陸の間にある[国際海峡](/content/strait/international)．
 
-::open-street-map{lat="36.37" lon="-5.67" zoom="5"}
+::open-street-map{lat="35.951" lon="-5.576" zoom="5"}
 ::
 
 ## 1. 概要

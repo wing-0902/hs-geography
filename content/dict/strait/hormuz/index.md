@@ -5,7 +5,7 @@ category: 地形
 
 ペルシャ湾（アラビア湾）とオマーン湾を結ぶ[国際海峡](/content/strait/international)．
 
-::open-street-map{lat="27.01" lon="56.71" zoom="6"}
+::open-street-map{lat="26.7038" lon="56.5456" zoom="6"}
 ::
 
 ## 1. 概要
