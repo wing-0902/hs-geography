@@ -68,7 +68,7 @@ const linkHref = computed(() => {
 </script>
 
 <template>
-  <div flex flex-col w-full px-6 align-right class="mapRootDiv">
+  <div data-pagefind-ignore data-nosnippet flex flex-col w-full px-6 align-right class="mapRootDiv">
     <div
       v-if="isHidden"
       w-full
