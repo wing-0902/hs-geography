@@ -5,7 +5,7 @@ category: 地形
 
 マレー半島とスマトラ島を隔てる，全長900kmの[国際海峡](/content/strait/international/)．
 
-::open-street-map{frameSrc="https://www.openstreetmap.org/export/embed.html?bbox=95.60302734375%2C-5.943899579425587%2C108.23730468750001%2C10.336536087082974&amp;layer=mapnik&amp;marker=2.218683588558448%2C101.920166015625" linkHref="https://www.openstreetmap.org/?mlat=2.22&amp;mlon=101.92#map=6/2.22/101.92"}
+::open-street-map{lat="2.22" lon="101.91" zoom="6"}
 ::
 
 ## 1. 地形情報
