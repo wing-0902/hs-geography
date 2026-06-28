@@ -5,6 +5,9 @@ category: 地形
 
 [イギリス](/content/gb)と[フランス](/content/fr)を隔てるイギリス海峡の最狭部
 
+::open-street-map{lat="51.24" lon="1.47" zoom="6"}
+::
+
 ## 1. 概要
 
 - 北海と大西洋を結ぶ

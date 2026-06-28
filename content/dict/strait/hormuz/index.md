@@ -5,6 +5,9 @@ category: 地形
 
 ペルシャ湾（アラビア湾）とオマーン湾を結ぶ[国際海峡](/content/strait/international)．
 
+::open-street-map{lat="27.01" lon="56.71" zoom="6"}
+::
+
 ## 1. 概要
 
 - ペルシャ湾岸諸国で産出する石油の重要な搬出路

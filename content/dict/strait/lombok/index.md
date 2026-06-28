@@ -5,6 +5,9 @@ category: 地形
 
 バリ島とロンボク島（インドネシア中部・小スンダ列島）の間にある[国際海峡](/content/strait/international)
 
+::open-street-map{lat="-8.442" lon="115.862" zoom="8"}
+::
+
 ## 1. 地形情報
 
 - インド洋とバリ海を結ぶ
