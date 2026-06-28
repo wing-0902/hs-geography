@@ -43,7 +43,10 @@ export default defineNuxtConfig({
   site: {
     url: 'https://geography.hs.dict.digital',
     name: '地理探求 - dict.digital',
-    trailingSlash: true
+    trailingSlash: true,
+  },
+  sitemap: {
+    zeroRuntime: true
   },
   vite: {
     optimizeDeps: {
