@@ -40,7 +40,7 @@ const handleAccept = () => {
         クリックすると外部の地図（OpenStreetMap）を読み込みます．
       </p>
       <p text-sm text-center mb-4 text-gray-600>
-        （この機能を利用すると，外部のウェブサイトがあなたやデバイスに関する情報を収集する場合があります．）
+        （この機能では，外部のウェブサイトがあなたやデバイスに関する情報を収集する場合があります．）
       </p>
       <button
         mt-4
@@ -57,7 +57,7 @@ const handleAccept = () => {
     <iframe v-else w-full h-full :src="frameSrc"></iframe>
 
     <NuxtLink text-right :to="linkHref" target="_blank" class="mt-2">
-      別タブで地図を開く<span i-material-symbols-light-open-in-new></span>
+      新規タブで開く<span i-material-symbols-light-open-in-new></span>
     </NuxtLink>
   </div>
 </template>
@@ -69,5 +69,6 @@ const handleAccept = () => {
 }
 .handleAcceptButton {
   color: var(--themeColor);
+  font-family: 'Zen Kaku Gothic New', sans-serif;
 }
 </style>
