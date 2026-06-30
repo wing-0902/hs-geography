@@ -1,5 +1,5 @@
 ---
-title: ソヴィエト連邦
+title: ソビエト連邦
 category: 国家
 ---
 
