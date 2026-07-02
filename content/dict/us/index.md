@@ -59,7 +59,7 @@ category: 国家
 - 19世紀以降，ヨーロッパ各地から移民
   - [ドイツ](/content/de)系
   - [イギリス](/content/gb)系
-  - [アイルランド](/content/ie)系：[ジャガイモ飢饉](/content/ie/great_famine)で移住
+  - [アイルランド](/content/ie)系：[ジャガイモ飢饉](/content/dict/ie/great_famine/index.md)で移住
 
 ### 黒人
 
